@@ -23,4 +23,4 @@ int Pow(int numA, int numB)
     return res;
 }
 int pow = Pow(numberA, numberB);
-Console.WriteLine(numberB < 0 ? "B - должно быть натуральным числом!" : $"A в степени B  => {pow}");
+Console.WriteLine(numberB <= 0 ? "B - должно быть натуральным числом!" : $"A в степени B  => {pow}");
