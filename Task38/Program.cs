@@ -40,6 +40,7 @@ double DifferenceMaxMin(double[] array)
         if (array[i] < minNumber) minNumber = array[i];
     }
     double differenceMaxMin = maxNumber - minNumber;
+    differenceMaxMin = Math.Round(differenceMaxMin, 2);
     Console.WriteLine ($"Максимальный элемент массива => {maxNumber}; минимальный элемент массива => {minNumber}");
     return  differenceMaxMin;
     
