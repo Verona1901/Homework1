@@ -15,7 +15,7 @@ double b2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите число k2: ");
 double k2 = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine($"Результат:");
+Console.Write($"Точка пересечения двух прямых:");
 PrintArray(FindCross(b1, k1, b2, k2));
 
 double[] FindCross(double b1, double k1, double b2, double k2)
@@ -28,12 +28,12 @@ double[] FindCross(double b1, double k1, double b2, double k2)
 
 void PrintArray(double[] array)
 {
-    Console.Write("[");
+    Console.Write("(");
     for (int i = 0; i < array.Length; i++)
     {
         double x = Math.Round (array[i],2);
         if (i < array.Length - 1) Console.Write($"{x}, ");
         else Console.Write($"{x} ");
     }
-    Console.WriteLine("]");
+    Console.WriteLine(")");
 }
