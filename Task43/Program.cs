@@ -31,7 +31,7 @@ void PrintArray(double[] array)
     for (int i = 0; i < array.Length; i++)
     {
         double x = Math.Round(array[i], 2);
-        if (i < array.Length - 1) Console.Write($"{x}, ");
+        if (i < array.Length - 1) Console.Write($"{x}; ");
         else Console.Write($"{x} ");
     }
     Console.WriteLine(")");
