@@ -9,31 +9,32 @@ double b1 = Convert.ToDouble(Console.ReadLine());
 
 Console.Write("Введите число k1: ");
 double k1 = Convert.ToDouble(Console.ReadLine());
+
 Console.Write("Введите число b2: ");
 double b2 = Convert.ToDouble(Console.ReadLine());
 
 Console.Write("Введите число k2: ");
 double k2 = Convert.ToDouble(Console.ReadLine());
 
-Console.Write($"Точка пересечения двух прямых:");
-PrintArray(FindCross(b1, k1, b2, k2));
+
 
 double[] FindCross(double b1, double k1, double b2, double k2)
 {
     double x = (b2 - b1) / (k1 - k2);
     double y = k1 * x + b1;
-    return new double[] {x,y};
+    return new double[] { x, y };
 }
-
 
 void PrintArray(double[] array)
 {
     Console.Write("(");
     for (int i = 0; i < array.Length; i++)
     {
-        double x = Math.Round (array[i],2);
+        double x = Math.Round(array[i], 2);
         if (i < array.Length - 1) Console.Write($"{x}, ");
         else Console.Write($"{x} ");
     }
     Console.WriteLine(")");
 }
+Console.Write($"Точка пересечения двух прямых:");
+PrintArray(FindCross(b1, k1, b2, k2));
