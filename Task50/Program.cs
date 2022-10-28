@@ -45,9 +45,11 @@ int indexI = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите индекс столбца:");
 int indexJ = Convert.ToInt32(Console.ReadLine());
 
- void ElementMatrix(int [,] matrix)
+void ElementMatrix(int[,] matrix)
 {
-    if (indexI < matrix.GetLength(0) && indexJ < matrix.GetLength(1))
+    if (indexI < 0 || indexJ < 0)
+        Console.Write("Введите значение >=0"); // было упущено. добавлена проверка при отрицательных значениях
+    else if (indexI < matrix.GetLength(0) && indexJ < matrix.GetLength(1))
         Console.Write($"Значение элемента {matrix[indexI, indexJ]}");
 
     else Console.WriteLine($"{indexI},{indexJ} -> такого элемента в массиве нет");
